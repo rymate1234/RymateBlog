@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Post</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-markdown.min.css') }}" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>New Post</h1>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="post-title">Post Title</label>
+                <input type="email" class="form-control" id="post-title" placeholder="">
+            </div>
+            <ul class="nav nav-tabs visible-xs visible-s">
+                <li id="editor_tab" class="active">
+                    <a id="editor_tab">Editor</a>
+                </li>
+                <li id="preview_tab">
+                    <a id="preview_tab">Preview</a>
+                </li>
+            </ul>
+            <div class="row tab-content">
+                <div class="col-md-6" id="textview">
+                    <textarea id="editor" name="content" rows="25" placeholder="Start typing here!"></textarea>
+                </div>
+                <div class="col-md-6" id="preview">
+                    <div id="md-preview" data-provider="markdown-preview"></div>
+                </div>
+            </div>
+            <hr/>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/markdown.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/bootstrap-markdown.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/site.js') }}"></script>
+</body>
+
+</html>
