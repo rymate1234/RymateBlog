@@ -6,7 +6,7 @@ create table entries (
   text text not null
 );
 
-create table entries (
+create table users# (
   id integer primary key autoincrement,
   username text not null,
   password text not null
